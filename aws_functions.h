@@ -167,7 +167,7 @@ static inline const ngx_str_t* ngx_aws_auth__canonize_query_string(ngx_pool_t *p
 
 static inline struct AwsCanonicalHeaderDetails ngx_aws_auth__canonize_headers(ngx_pool_t *pool,
 		const ngx_http_request_t *req,
-		const const ngx_str_t *amz_date,
+		const ngx_str_t *amz_date,
 		const ngx_str_t *content_hash,
     const ngx_str_t *s3_endpoint) {
 	size_t header_names_size = 1, header_nameval_size = 1;
@@ -382,7 +382,6 @@ static inline const ngx_str_t* ngx_aws_auth__make_auth_token(ngx_pool_t *pool,
 static inline struct AwsSignedRequestDetails ngx_aws_auth__compute_signature(ngx_pool_t *pool, ngx_http_request_t *req,
 		const ngx_str_t *signing_key,
 		const ngx_str_t *key_scope,
-		const ngx_str_t *s3_bucket_name,
     const ngx_str_t *s3_endpoint) {
 	struct AwsSignedRequestDetails retval;
 
