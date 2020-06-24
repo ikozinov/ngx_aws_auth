@@ -57,7 +57,7 @@ struct AwsSignedRequestDetails {
 // tests...
 #define safe_ngx_log_error(req, ...)                                  \
   if (req->connection) {                                              \
-    ngx_log_error(NGX_LOG_ERR, req->connection->log, 0, __VA_ARGS__); \
+    ngx_log_error(NGX_LOG_DEBUG, req->connection->log, 0, __VA_ARGS__); \
   }
 
 static const ngx_str_t EMPTY_STRING_SHA256 = ngx_string("e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855");
